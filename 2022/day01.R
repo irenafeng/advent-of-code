@@ -30,7 +30,8 @@ for (i in 1:nrow(day1_input)) {
     elves[[elfnum]] <- vector()
   } else {
     elves[[elfnum]] <- append(elves[[elfnum]], day1_input[i,V1])
-  } 
+  }
+  
 }
 
 caloric_sums <- vector()
@@ -41,13 +42,14 @@ for (i in 1:length(elves)) {
 max_elf <- which.max(caloric_sums)
 max_elf_calories <- caloric_sums[max_elf]
 
-cat("Part 1: The Elf carrying the most Calories is carrying ", max_elf_calories, " total Calories.")
+cat("Part 1: The Elf carrying the most Calories is carrying", max_elf_calories, "total Calories.")
+
 
 # ----------------------------------------------------------------------------
-# (2) code, part 2
+# (3) code, part 2
 # ----------------------------------------------------------------------------
 
 caloric_sums_sorted <- sort(caloric_sums, decreasing = TRUE)
 max_3_elves_calories <- caloric_sums_sorted[1] + caloric_sums_sorted[2] + caloric_sums_sorted[3]
 
-cat("Part 2: The top 3 Elves carrying the most Calories are carrying ", max_3_elves_calories, " Calories in total.")
+cat("Part 2: The top 3 Elves carrying the most Calories are carrying", max_3_elves_calories, "Calories in total.")
